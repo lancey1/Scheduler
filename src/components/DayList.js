@@ -29,16 +29,15 @@ export default function DayList(props) {
 //  data we want is in the props.DAYS and props.DAY is the selected day
 // we want to loop through the days and create a DayListItem for each day
 // 
-  const DayLists = props.days.map((days) => {
+  const DayLists = props.days.map((day) => {
     // console.log(days)
     return (
       <DayListItem
-        key={days.id}
-        name={days.name}
-        spots={days.spots}
-        selected={days.name === props.day}
-        value={days.name}
-        setDay={props.setDay}
+      key={day.id} 
+      name={day.name} 
+      spots={day.spots} 
+      selected={day.name === props.value}
+      setDay={props.onChange}
         // we are again passing in the setDay function as a prop to the DayListItem component
       />
     );

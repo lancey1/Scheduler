@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import DayList from "components/DayList";
+
 import "components/Application.scss";
 
 export default function Application(props) {
@@ -30,26 +31,22 @@ export default function Application(props) {
           alt="Interview Scheduler"
         />
         <hr className="sidebar__separator sidebar--centered" />
-        <nav className="sidebar__menu">        
-        
-        <DayList  
-          days={days} 
-          day = {day}
-          setDay={setDay} 
-          // we are passing in the setDay function as a prop to the DayList component
-        />
-
+        <nav className="sidebar__menu">
+          <DayList
+            days={days}
+            value={day}
+            onChange={setDay} 
+            // we are passing in the setDay function as a prop to the DayList component
+          />
         </nav>
         <img
           className="sidebar__lhl sidebar--centered"
           src="images/lhl.png"
           alt="Lighthouse Labs"
         />{" "}
-        
       </section>
       <section className="schedule">
         {/* Replace this with the schedule elements durint the "The Scheduler" activity. */}
-
       </section>
     </main>
   );

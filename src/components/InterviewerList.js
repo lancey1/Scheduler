@@ -4,17 +4,16 @@ import InterviewerListItem from "components/InterviewerListItem";
 
 export default function InterviewerList(props) {
   console.log(props);
-  const [value, onChange] = useState();
-
-  const Interviewers = props.interviewers.map((interviewer) => {
+  // validates props.interviewers first before rendering, if it is empty, it will return null and won't render anything / won't crash program
+  const Interviewers = Array.isArray(props.interviewers) && props.interviewers.map((interviewer) => {
     return (
       // using spread operator to pass in all the props to the InterviewerListItem component
       <InterviewerListItem
-        key={interviewer.id}
+        id={interviewer.id}
         name={interviewer.name}
         avatar={interviewer.avatar}
-        selected={interviewer.id === value}
-        setInterviewer={() => onChange(interviewer.id)}
+        selected={interviewer.id === props.value}
+        setInterviewer={() => props.onChange(interviewer.id)}
       />
     );
   });

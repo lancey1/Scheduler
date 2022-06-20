@@ -2,6 +2,7 @@
   "name": "scheduler",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:8001",
   "dependencies": {
     "classnames": "^2.2.6",
     "normalize.css": "^8.0.1",
@@ -38,6 +39,7 @@
     "@storybook/react": "^5.0.10",
     "@testing-library/jest-dom": "^4.0.0",
     "@testing-library/react": "^8.0.7",
+    "@testing-library/react-hooks": "^8.0.1",
     "babel-loader": "^8.0.5",
     "node-sass": "^4.14.0"
   },
@@ -46,5 +48,17 @@
       "<rootDir>/node_modules/",
       "<rootDir>/.git/"
     ]
-  }
+  },
+  "description": "## Setup",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lancey1/scheduler.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lancey1/scheduler/issues"
+  },
+  "homepage": "https://github.com/lancey1/scheduler#readme"
 }

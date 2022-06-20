@@ -4,7 +4,7 @@ import "components/Button.scss";
 
 
 export default function Button(props) {
-   console.log(props)
+  //  console.log(props)
    let btnClass = classNames("button",{'button--confirm': props.confirm},{'button--danger':props.danger})
    
    // let buttonClass = "button";

@@ -2,7 +2,7 @@ import React from "react";
 import DayListItem from "components/DayListItem";
 
 export default function DayList(props) {
-  console.log({props})
+  // console.log({props})
 //  result of console.log(props)
 // {
 //   "props": {

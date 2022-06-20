@@ -215,3 +215,15 @@ storiesOf("Appointment", module)
 
 
 // end
+
+// notes
+// The component has no results when React renders it the first time.
+// The component makes an asynchronous request to the API server.
+// The data for the component is returned in the response.
+// The component can now be updated with the data using an action that sets the state.
+// componentDidMount
+// componentDidUpdate
+// componentWillUnmount
+// hook rules
+// Don't call Hooks inside loops, conditions, or nested functions.
+// Only call Hooks from inside React components.

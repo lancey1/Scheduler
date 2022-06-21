@@ -38,6 +38,7 @@ export default function DayList(props) {
       spots={day.spots} 
       selected={day.name === props.value}
       setDay={props.onChange}
+      bookInterview={props.bookInterview}
         // we are again passing in the setDay function as a prop to the DayListItem component
       />
     );

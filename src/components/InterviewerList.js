@@ -4,10 +4,11 @@ import InterviewerListItem from "components/InterviewerListItem";
 
 export default function InterviewerList(props) {
   // validates props.interviewers first before rendering, if it is empty, it will return null and won't render anything / won't crash program
-  const Interviewers = Array.isArray(props.interviewersArray) && props.interviewersArray.map((interviewer) => {
+  const Interviewers = Array.isArray(props.interviewers) && props.interviewers.map((interviewer) => {
     return (
       // using spread operator to pass in all the props to the InterviewerListItem component
       <InterviewerListItem
+        key={interviewer.id}
         id={interviewer.id}
         name={interviewer.name}
         avatar={interviewer.avatar}

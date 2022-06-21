@@ -11,29 +11,28 @@ export default function Form(props) {
     setInterviewer(null);
   };
   const Cancel = () => {
-    props.onCancel(student, interviewer);
     reset();
-  };
-  const Save = () => {
-    props.onSave(student, interviewer);
+    props.onCancel(student, interviewer);
   };
 
   return (
     <main className="appointment__card appointment__card--create">
       <section className="appointment__card-left">
-        <form autoComplete="off" onSubmit={event => event.preventDefault()}>
+        <form autoComplete="off">
           <input
             className="appointment__create-input text--semi-bold"
-            name="name"
+            name={props.name}
             type="text"
             placeholder="Enter Student Name"
             // controlled component
             value={student}
             onChange={(event) => setStudent(event.target.value)}
+            bookInterview = {props.bookInterview}
+            onClick = {props.onSave}
           />
         </form>
         <InterviewerList
-          interviewersArray={props.interviewersArray}
+          interviewers={props.interviewers}
           // controlled list
           value={interviewer}
           onChange={setInterviewer}
@@ -44,7 +43,7 @@ export default function Form(props) {
           <Button onClick={Cancel} danger>
             Cancel
           </Button>
-          <Button onClick={Save} confirm>
+          <Button confirm onSubmit={event => event.preventDefault()} onClick={event => props.onSave(student, interviewer)}>
             Save
           </Button>
         </section>

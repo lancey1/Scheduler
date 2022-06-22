@@ -58,7 +58,6 @@ export default function Appointment(props) {
     transition(EDIT);
   }
 
-  console.log(props.interview);
   return (
     <article className="appointment">
       <Header time={props.time} />

@@ -25,13 +25,14 @@ export default function Form(props) {
       setError("Please select an interviewer");
       return;
     }
+    setError("")
     props.onSave(student, interviewer);
   }
 
   return (
     <main className="appointment__card appointment__card--create">
       <section className="appointment__card-left">
-        <form autoComplete="off">
+        <form autoComplete="off" onSubmit={event => event.preventDefault()}>
           <input
             data-testid="student-name-input"
             className="appointment__create-input text--semi-bold"
@@ -46,6 +47,7 @@ export default function Form(props) {
         </form>
         <section className="appointment__validation">{error}</section>
         <InterviewerList
+          data-testid= "interviewer-select"
           interviewers={props.interviewers}
           // controlled list
           value={interviewer}

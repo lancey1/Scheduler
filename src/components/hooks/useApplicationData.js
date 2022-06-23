@@ -10,9 +10,8 @@ export default function useApplicationData() {
   });
   // setDays needs to be reintroduced when the useState is combined
   const setDay = (day) => setState({ ...state, day });
-  // const setDays = (days) => setState((prev) => ({ ...prev, days }));
 
-  const updateSpots = function (state) {
+  function updateSpots (state) {
     const dayToChange = state.days.find((day) => day.name === state.day);
     const newDay = { ...dayToChange };
 
@@ -30,7 +29,6 @@ export default function useApplicationData() {
 
     const newState = {...state}
     newState.days = newDays;
-    // console.log(newState.days)
     return newState
   };
 
@@ -47,7 +45,6 @@ export default function useApplicationData() {
         interviewers: all[2].data,
       }));
     });
-    // .catch(err => err)
   }, []);
 
   function bookInterview(id, interview) {
@@ -68,7 +65,6 @@ export default function useApplicationData() {
         setState({...newNewState, updatedAppointments})
         return res;
       })      ;
-    // .catch(err => err)
   }
 
   function cancelInterview(id, interview) {
@@ -89,7 +85,6 @@ export default function useApplicationData() {
         setState({ ...newNewState, updatedAppointments});
         return res;
       })
-    // .catch(err => console.log(err))
   }
 
   return {

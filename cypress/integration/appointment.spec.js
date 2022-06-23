@@ -7,7 +7,6 @@ describe("should book an appointment", () => {
     cy.visit("/");
     cy.contains("[data-cy=day]", "Monday");
   });
-
   it("should book an interview", () => {
     // Clicks on the "Add" button in the second appointment
     cy.get("[alt=Add]").first().click();

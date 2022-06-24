@@ -16,10 +16,12 @@ Interview scheduler is a single page app built with React. For users to book an 
 !["View of Scheduler in Create/Edit"](https://github.com/lancey1/scheduler/blob/master/docs/edit-create%20view.png)
 - View of Scheduler in Create/Edit
 
-
 ## Setup
 
 Install dependencies with `npm install`.
+Go to root of scheduler-API and run npm start
+Go to root of scheduler and run npm start
+
 
 ## Running Webpack Development Server
 
